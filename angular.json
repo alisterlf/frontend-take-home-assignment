@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontend-take-home-assignment"
+    }
+  },
+  "defaultProject": "frontend-take-home-assignment",
+  "cli": {
+    "analytics": "9845b009-0e5c-4ff8-ad37-7b0af2528493"
+  }
 }
