@@ -1,0 +1,145 @@
+@import 'variables';
+@import 'mixins';
+
+header {
+  background-color: $white;
+  padding: 1.5rem;
+
+  img {
+    display: block;
+    height: 38px;
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: $mobile-breakpoint;
+}
+@media (min-width: $mobile-breakpoint) {
+  header {
+    grid-template-columns: 1fr;
+  }
+
+  .back-button {
+    display: none;
+  }
+}
+
+main {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: $spacer;
+}
+
+h1 {
+  color: $blue;
+  font-size: $h3-font-size;
+  font-weight: $font-weight-base;
+  margin: 0;
+  padding: 54px 0 40px;
+  text-align: center;
+
+  strong {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.card {
+  > img {
+    height: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: $h1-font-size;
+  line-height: 1.25;
+  margin: 0;
+}
+
+h3 {
+  color: $dark-grey;
+  font-size: $h5-font-size;
+  font-weight: $font-weight-base;
+  line-height: 1.25;
+  margin: 0;
+}
+
+form {
+  align-items: flex-start;
+  display: grid;
+  gap: $spacer;
+  grid-template-columns: 1fr;
+  margin-top: $spacer * 2.5;
+
+  [type='submit'] {
+    background-color: $blue;
+    border-radius: 100vh;
+    border-style: none;
+    color: $white;
+    font-size: $h4-font-size;
+    font-weight: $font-weight-bold;
+    padding: $spacer;
+  }
+}
+
+.sufix img {
+  transform: scaleX(-1);
+}
+
+.summary {
+  align-items: center;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  > strong,
+  span,
+  p {
+    padding: $spacer * 2;
+  }
+
+  > strong {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-normal;
+  }
+
+  span {
+    @include text-overflow;
+    color: $light-blue;
+    font-size: $font-size-xlg;
+    font-weight: $font-weight-normal;
+    text-align: right;
+  }
+
+  p {
+    background-color: $superlight-grey;
+    font-size: $font-size-sm;
+    grid-column: 1/3;
+    margin: 0;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+  :host {
+    grid-template-columns: auto 1fr;
+  }
+
+  a {
+    display: block;
+  }
+
+  .card {
+    grid-column: 1/3;
+  }
+
+  form {
+    grid-template-columns: 1fr 1fr;
+
+    .summary,
+    > button {
+      grid-column: 1/3;
+    }
+  }
+}
