@@ -37,7 +37,7 @@
       </div>
       <div class="summary" *ngIf="summary$ | async as summary">
         <strong>Monthly <span>amount</span></strong>
-        <span>
+        <span [title]="summary.monthlyAmount | currency: 'USD':'symbol':'1.2-6'">
           <ng-container *ngIf="summary.monthlyAmount >= 1; else decimals">
             {{ summary.monthlyAmount | currency: 'USD':'symbol':'1.0-2' }}
           </ng-container>
@@ -47,11 +47,11 @@
         </span>
         <p>
           You're planning <strong>{{ summary.remainingMonths }} monthly deposits</strong> to reach your
-          <strong>{{ summary.goalAmount | currency: 'USD':'symbol':'1.0-0' }}</strong> goal by
+          <strong>{{ summary.goalAmount | currency: 'USD':'symbol':'1.0-2' }}</strong> goal by
           <strong>{{ summary.goalDeadline | date: 'MMMM yyyy' }}.</strong>
         </p>
       </div>
-      <button type="submit" [disabled]="goalForm.invalid">Finish</button>
+      <button type="submit" [disabled]="goalForm.invalid">Confirm</button>
     </form>
   </div>
 </main>
