@@ -94,6 +94,7 @@ form {
     color: $white;
     font-size: $h4-font-size;
     font-weight: $font-weight-bold;
+    line-height: 1.5rem;
     padding: $spacer;
   }
 }
@@ -276,7 +277,6 @@ input {
   }
 
   > span {
-    @include text-overflow;
     color: $light-blue;
     font-size: $font-size-xlg;
     font-weight: $font-weight-normal;
