@@ -22,6 +22,27 @@ body {
   margin: 0;
 }
 
+header {
+  background-color: $white;
+  padding: 1rem;
+
+  img {
+    display: block;
+    height: 30px;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+  header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 35rem;
+}
+
 [disabled] {
   filter: grayscale(1) opacity(50%);
 }
@@ -41,5 +62,95 @@ body {
   .card {
     border: 1px solid $light-grey;
     padding: 2.5rem;
+  }
+}
+
+.form-field {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+
+  label {
+    color: $almost-black;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    grid-column: 1/4;
+    line-height: 1.25em;
+  }
+
+  input {
+    border: 1px solid $light-grey;
+    border-radius: $border-radius / 2;
+    box-sizing: border-box;
+    font-size: $font-size-base * 1.25;
+    font-weight: $font-weight-bold;
+    height: 3.5rem;
+    line-height: 1.2;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .errors {
+    color: $red;
+    grid-column: 1/4;
+    padding: $spacer / 2 0;
+  }
+
+  .action-button {
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+
+  .prefix,
+  .sufix {
+    background-color: $superlight-grey;
+    border: 1px solid $light-grey;
+    border-radius: $border-radius / 2;
+    color: $dark-grey;
+    display: inline-block;
+    font-family: $font-family-base;
+    font-size: 1.375rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0;
+    text-align: center;
+    width: 3.5rem;
+
+    img {
+      display: block;
+      height: 1rem;
+      margin: 0 auto;
+    }
+  }
+
+  .prefix {
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    grid-column: 1/2;
+  }
+
+  .sufix {
+    border-bottom-left-radius: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    grid-column: 3/4;
+  }
+
+  .prefix ~ input {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    grid-column-start: 2;
+    grid-row: 2/3;
+  }
+
+  .sufix ~ input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    grid-column-end: 3;
+  }
+
+  .sufix img {
+    transform: scaleX(-1);
   }
 }

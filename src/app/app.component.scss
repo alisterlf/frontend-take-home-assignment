@@ -1,27 +1,6 @@
 @import 'variables';
 @import 'mixins';
 
-header {
-  background-color: $white;
-  padding: 1rem;
-
-  img {
-    display: block;
-    height: 30px;
-  }
-}
-
-@media (min-width: $mobile-breakpoint) {
-  header {
-    padding: 1.5rem 2rem;
-  }
-}
-
-main {
-  margin: 0 auto;
-  max-width: 35rem;
-}
-
 h1 {
   color: $blue;
   font-size: $h4-font-size;
@@ -101,155 +80,14 @@ form {
 
 @media (min-width: $mobile-breakpoint) {
   form {
+    grid-template-columns: 1fr 1fr;
     margin-top: $spacer * 2.5;
-  }
-}
 
-label {
-  color: $almost-black;
-  font-size: $font-size-base;
-  font-weight: $font-weight-normal;
-  line-height: 1.25em;
-}
-
-input {
-  border: 1px solid $light-grey;
-  border-radius: $border-radius / 2;
-  box-sizing: border-box;
-  font-size: $font-size-base * 1.25;
-  font-weight: $font-weight-bold;
-  height: 3.5rem;
-  line-height: 1.2;
-  padding: 1rem;
-  width: 100%;
-}
-
-[type='month'] {
-  appearance: none;
-  background-color: $white;
-  font-family: $font-family-base;
-  padding: 0.25rem;
-  position: relative;
-
-  &::-webkit-datetime-edit {
-    text-align: center;
-  }
-
-  &::-webkit-datetime-edit-text {
-    display: none;
-  }
-
-  &::-webkit-datetime-edit-month-field {
-    display: block;
-    text-transform: capitalize;
-  }
-
-  &::-webkit-clear-button {
-    display: none;
-  }
-
-  &::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  &::-webkit-calendar-picker-indicator {
-    bottom: 0;
-    display: block;
-    height: auto;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
-  }
-
-  &::-webkit-datetime-edit-year-field {
-    display: block;
-    margin: -0.5rem 0 -1rem;
-    transform: scale(0.8);
-  }
-
-  &::-webkit-date-and-time-value {
-    margin: 0 auto;
-    text-align: center;
-    white-space: pre-line;
-    width: min-content;
-  }
-}
-
-.form-field {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-
-  label {
-    grid-column: 1/4;
-  }
-
-  .errors {
-    color: $red;
-    grid-column: 1/4;
-    padding: $spacer / 2 0;
-  }
-
-  .action-button {
-    &:hover {
-      filter: brightness(0.95);
+    .summary,
+    > button {
+      grid-column: 1/3;
     }
   }
-
-  .prefix,
-  .sufix {
-    background-color: $superlight-grey;
-    border: 1px solid $light-grey;
-    border-radius: $border-radius / 2;
-    color: $dark-grey;
-    display: inline-block;
-    font-family: $font-family-base;
-    font-size: 1.375rem;
-    height: 3.5rem;
-    line-height: 3.5rem;
-    padding: 0;
-    text-align: center;
-    width: 3.5rem;
-
-    img {
-      display: block;
-      height: 1rem;
-      margin: 0 auto;
-    }
-  }
-
-  .prefix {
-    border-bottom-right-radius: 0;
-    border-right-width: 0;
-    border-top-right-radius: 0;
-    grid-column: 1/2;
-  }
-
-  .sufix {
-    border-bottom-left-radius: 0;
-    border-left-width: 0;
-    border-top-left-radius: 0;
-    grid-column: 3/4;
-  }
-
-  .prefix ~ input {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    grid-column-start: 2;
-    grid-row: 2/3;
-  }
-
-  .sufix ~ input {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    grid-column-end: 3;
-  }
-}
-
-.sufix img {
-  transform: scaleX(-1);
 }
 
 .summary {
@@ -311,25 +149,56 @@ input {
   }
 }
 
-@media (min-width: $mobile-breakpoint) {
-  :host {
-    grid-template-columns: auto 1fr;
+[type='month'] {
+  appearance: none;
+  background-color: $white;
+  font-family: $font-family-base;
+  padding: 0.25rem;
+  position: relative;
+
+  &::-webkit-datetime-edit {
+    text-align: center;
   }
 
-  a {
+  &::-webkit-datetime-edit-text {
+    display: none;
+  }
+
+  &::-webkit-datetime-edit-month-field {
     display: block;
+    text-transform: capitalize;
   }
 
-  .card {
-    grid-column: 1/3;
+  &::-webkit-clear-button {
+    display: none;
   }
 
-  form {
-    grid-template-columns: 1fr 1fr;
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
 
-    .summary,
-    > button {
-      grid-column: 1/3;
-    }
+  &::-webkit-calendar-picker-indicator {
+    bottom: 0;
+    display: block;
+    height: auto;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+
+  &::-webkit-datetime-edit-year-field {
+    display: block;
+    margin: -0.5rem 0 -1rem;
+    transform: scale(0.8);
+  }
+
+  &::-webkit-date-and-time-value {
+    margin: 0 auto;
+    text-align: center;
+    white-space: pre-line;
+    width: min-content;
   }
 }
