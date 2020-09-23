@@ -141,16 +141,11 @@ main {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     grid-column-start: 2;
-    grid-row: 2/3;
   }
 
   .sufix ~ input {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     grid-column-end: 3;
-  }
-
-  .sufix img {
-    transform: scaleX(-1);
   }
 }

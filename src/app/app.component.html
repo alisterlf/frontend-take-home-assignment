@@ -11,20 +11,14 @@
       <div class="form-field">
         <label for="amount">Total amount</label>
         <button type="button" class="prefix">$</button>
-        <input type="text" name="amount" formControlName="amount" inputmode="numeric" autocomplete="off" mask="separator.2" />
+        <input type="text" id="amount" formControlName="amount" inputmode="numeric" autocomplete="off" mask="separator.2" />
         <span class="errors" *ngIf="goalForm.get('amount').invalid && (goalForm.get('amount').dirty || goalForm.get('amount').touched)">
           <span *ngIf="goalForm.get('amount').hasError('required')"> This field is required. </span>
         </span>
       </div>
       <div class="form-field">
         <label for="deadline">Reach goal by</label>
-        <button type="button" class="prefix action-button" (click)="skipMonth(-1)">
-          <img src="./assets/icons/arrow.svg" alt="Previous month" />
-        </button>
-        <button type="button" class="sufix action-button" (click)="skipMonth(1)">
-          <img src="./assets/icons/arrow.svg" alt="Next month" />
-        </button>
-        <input type="month" [min]="dateMin" [max]="dateMax" name="deadline" formControlName="deadline" />
+        <app-month-picker [min]="dateMin" [max]="dateMax" formControlName="deadline" id="deadline"></app-month-picker>
         <span class="errors" *ngIf="goalForm.get('deadline').invalid">
           <span *ngIf="goalForm.get('deadline').hasError('required')"> This field is required. </span>
           <span *ngIf="goalForm.get('deadline').hasError('minDate')">

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DateValidator } from '@app/shared/validators/date.validator';
 import { combineLatest, Observable } from 'rxjs';
@@ -10,7 +10,7 @@ import { MonthPickerValue, Summary } from './app.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   summary$: Observable<Summary>;
   goalForm: FormGroup;
   dateMin: string;
@@ -21,11 +21,13 @@ export class AppComponent {
     this.setMonthPickerMinAndMaxValues();
     this.buildForm();
   }
+
   private setMonthPickerMinAndMaxValues(): void {
     const initialValue = this.getMonthPickerInitialValue();
     this.dateMin = `${initialValue.year}-${initialValue.month}`;
     this.dateMax = `${+initialValue.year + 100}-12`;
   }
+
   private getMonthPickerInitialValue(): MonthPickerValue {
     const now = new Date();
     const year = now.getFullYear().toString();
@@ -36,6 +38,7 @@ export class AppComponent {
       month,
     };
   }
+
   private buildForm(): void {
     const initialValue = this.getMonthPickerInitialValue();
     this.goalForm = this.fb.group({
@@ -47,6 +50,7 @@ export class AppComponent {
     });
     this.bindForm();
   }
+
   private bindForm(): void {
     const $amount = this.goalForm.get('amount').valueChanges;
     const $deadline = this.goalForm.get('deadline').valueChanges;
@@ -62,6 +66,7 @@ export class AppComponent {
       })
     );
   }
+
   private getSummary(goalAmount: number, goalDeadline: Date): Summary {
     const remainingMonths = this.getRemainingMonths(goalDeadline);
     const monthlyAmount = goalAmount / remainingMonths;
@@ -72,24 +77,17 @@ export class AppComponent {
       remainingMonths,
     };
   }
+
   private getRemainingMonths(goalDeadline: Date): number {
     const now = new Date();
     const years = goalDeadline.getFullYear() - now.getFullYear();
     const months = years * 12 + (goalDeadline.getMonth() - now.getMonth());
     return months > 0 ? months : 1;
   }
-  skipMonth(amount: number): void {
-    const deadlineField = this.goalForm.get('deadline');
-    const currentDate = new Date(deadlineField.value);
-    const timeZoneOffset = new Date().getTimezoneOffset() / 60;
-    const newDate = new Date(Date.UTC(currentDate.getFullYear(), currentDate.getMonth() + 1 + amount, 1, timeZoneOffset, 0, 0));
-    const newMonth = newDate.getMonth() + 1;
-    const formatedNewMonth = newMonth < 10 ? `0${newMonth}` : `${newMonth}`;
-    deadlineField.setValue(`${newDate.getFullYear()}-${formatedNewMonth}`);
-  }
+
   submitGoal(): void {
     if (this.goalForm.valid) {
-      console.log('done');
+      console.log('Done!');
     }
   }
 }
