@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "Angular.ng-template",
+    "msjsdiag.debugger-for-chrome",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "stylelint.vscode-stylelint",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "VisualStudioExptTeam.vscodeintellicode"
+  ],
+  "unwantedRecommendations": []
+}

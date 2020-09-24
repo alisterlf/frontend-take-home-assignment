@@ -1,0 +1,20 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "files.exclude": {
+    "**/coverage": true,
+    "**/node_modules": true,
+    "**/TESTS-*.xml": true,
+    "**/e2e/junit": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/coverage": true,
+    "**/docs": true
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
