@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Considerations
 
 - I've decided to use Angular because it is the framework/library that i know most of best practices and techniques.
-- As discuss by email, I made some layout adjustments to make it more symmetrical
+- As discussed by email, I made some layout adjustments to make it more symmetrical.
 - I've decided to use the native `<input type="month"/>` to make the month picker, because it is very fast and has a great experience on mobile, and a good experience on desktop (it is fairly easy to customize to meet some layout choices).
 
 ## Usage
