@@ -4,26 +4,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
-## Development server
+**Demo** [https://alisterlf.github.io/frontend-take-home-assignment/](https://alisterlf.github.io/frontend-take-home-assignment/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Considerations
 
-## Code scaffolding
+- I've decided to use Angular because it is the framework/library that i know most of best practices and techniques.
+- As discuss by email, I made some layout adjustments to make it more symmetrical
+- I've decided to use the native `<input type="month"/>` to make the month picker, because it is very fast and has a great experience on mobile, and a good experience on desktop (it is fairly easy to customize to meet some layout choices).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+This project requires Node >=12 and NPM >= 6.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+After you have cloned this repo, install the dependencies with: `npm install`
 
-## Running unit tests
+### Development server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Running end-to-end tests
+### Build
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.build.
 
-## Further help
+### Running unit tests
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm run test` to execute the unit tests. Run `npm run test:dev` to execute the unit tests and wacht for changes.
