@@ -33,7 +33,7 @@ Run `npm run test` to execute the unit tests. Run `npm run test:dev` to execute 
 ### Examples
 
 #### Input month on Android
-![Input month on Android](src\assets\mockups\Android.jpg "Input month on Android")
+![Input month on Android](https://raw.githubusercontent.com/alisterlf/frontend-take-home-assignment/master/src/assets/mockups/Android.jpg "Input month on Android")
 
 #### Input month on iOS
-![Input month on iOS](src\assets\mockups\iOS.jpg "Input month on iOS")
+![Input month on iOS](https://raw.githubusercontent.com/alisterlf/frontend-take-home-assignment/master/src/assets/mockups/iOS.jpg "Input month on iOS")
