@@ -1,0 +1,66 @@
+/* Color palette */
+$almost-black: #1c1e1f;
+$dark-grey: #657786;
+$darkish-grey: #96a4b0;
+$grey: #aab8c2;
+$light-grey: #e1e8ed;
+$superlight-grey: #f4f8fa;
+$white: #fff;
+$light-blue: #0079ff;
+$blue: #1b31a8;
+$red: #fe5722;
+
+// Body
+$body-bg: $light-grey;
+$body-color: $almost-black;
+
+// Links
+$link-color: $blue;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+// Paragraphs
+$paragraph-margin-bottom: 1rem;
+
+// Fonts
+$font-family-base: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$font-size-base: 16px;
+$font-size-xlg: $font-size-base * 2.5;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-sm: $font-size-base * 0.75;
+
+$h1-font-size: $font-size-base * 2;
+$h2-font-size: $font-size-base * 1.625;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.125;
+$h5-font-size: $font-size-base;
+$h6-font-size: $font-size-base * 0.875;
+
+$font-weight-light: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+
+$font-weight-base: $font-weight-light;
+$line-height-base: 1.3;
+
+$text-muted: $grey;
+$list-inline-padding: 0.5rem;
+$spacer: 1rem;
+
+$headings-margin-bottom: ($spacer / 2);
+$headings-font-family: inherit;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.2;
+$headings-color: inherit;
+
+$mobile-breakpoint: 576px;
+$tablet-breakpoint: 768px;
+$sm-breakpoint: 1280px;
+$md-breakpoint: 1366px;
+$lg-breakpoint: 1920px;
+
+$border-radius: 0.5rem;
+$box-shadow: 0 1px 4px 0 rgba(150, 164, 176, 0.1);

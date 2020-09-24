@@ -1,0 +1,7 @@
+<button type="button" class="prefix action-button" (click)="skipMonth(-1)">
+  <img src="./assets/icons/arrow.svg" alt="Previous month" />
+</button>
+<button type="button" class="sufix action-button" (click)="skipMonth(1)">
+  <img src="./assets/icons/arrow.svg" alt="Next month" />
+</button>
+<input type="month" [min]="min" [max]="max" [formControl]="control" />
