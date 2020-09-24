@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/alisterlf/frontend-take-home-assignment/workflows/Node.js%20CI/badge.svg)
+
 # FrontendTakeHomeAssignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.

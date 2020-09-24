@@ -77,6 +77,10 @@ main {
     line-height: 1.25em;
   }
 
+  app-month-picker {
+    grid-column: 1/4;
+  }
+
   input {
     border: 1px solid $light-grey;
     border-radius: $border-radius / 2;
