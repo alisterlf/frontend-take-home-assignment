@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/alisterlf/frontend-take-home-assignment/workflows/Node.js%20CI/badge.svg)
+![Build and test](https://github.com/alisterlf/frontend-take-home-assignment/workflows/Build%20and%20test/badge.svg)
 
 # FrontendTakeHomeAssignment
 
