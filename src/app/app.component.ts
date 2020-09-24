@@ -31,8 +31,8 @@ export class AppComponent implements OnInit {
   private getMonthPickerInitialValue(): MonthPickerValue {
     const now = new Date();
     const year = now.getFullYear().toString();
-    const currentMonth = now.getMonth() + 2;
-    const month = currentMonth < 10 ? `0${currentMonth}` : `${currentMonth}`;
+    const nextMonth = now.getMonth() + 2;
+    const month = nextMonth < 10 ? `0${nextMonth}` : `${nextMonth}`;
     return {
       year,
       month,
@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
     const now = new Date();
     const years = goalDeadline.getFullYear() - now.getFullYear();
     const months = years * 12 + (goalDeadline.getMonth() - now.getMonth());
-    return months > 0 ? months : 1;
+    return months;
   }
 
   submitGoal(): void {

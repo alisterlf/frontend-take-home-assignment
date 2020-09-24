@@ -28,4 +28,22 @@ describe('MonthPickerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should jump on month forward with padleft', () => {
+    spyOn(Date.prototype, 'getMonth').and.returnValue(1);
+    spyOn(Date.prototype, 'getFullYear').and.returnValue(2020);
+
+    component.skipMonth(1);
+
+    expect(component.control.value).toBe('2020-02');
+  });
+
+  it('should jump on month forward', () => {
+    spyOn(Date.prototype, 'getMonth').and.returnValue(10);
+    spyOn(Date.prototype, 'getFullYear').and.returnValue(2020);
+
+    component.skipMonth(1);
+
+    expect(component.control.value).toBe('2020-11');
+  });
 });

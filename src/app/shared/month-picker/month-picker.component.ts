@@ -50,10 +50,6 @@ export class MonthPickerComponent {
     this.formControlDirective.valueAccessor.writeValue(obj);
   }
 
-  setDisabledState(isDisabled: boolean): void {
-    this.formControlDirective.valueAccessor.setDisabledState(isDisabled);
-  }
-
   skipMonth(amount: number): void {
     const currentDate = new Date(this.control.value);
     const timeZoneOffset = new Date().getTimezoneOffset() / 60;
