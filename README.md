@@ -29,3 +29,11 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 ### Running unit tests
 
 Run `npm run test` to execute the unit tests. Run `npm run test:dev` to execute the unit tests and wacht for changes.
+
+### Examples
+
+#### Input month on Android
+![Input month on Android](src\assets\mockups\Android.jpg "Input month on Android")
+
+#### Input month on iOS
+![Input month on iOS](src\assets\mockups\iOS.jpg "Input month on iOS")
