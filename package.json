@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "ng build",
+    "deploy": "ng build --prod --output-path docs --base-href /frontend-take-home-assignment/",
     "e2e": "ng e2e",
     "format": "prettier --write \"./{src,e2e}/**/*.{md,html,ts,js,json,scss}\"",
     "format:check": "prettier --list-different \"./{src,e2e}/**/*.{md,html,ts,js,json,scss}\"",
